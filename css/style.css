@@ -1,0 +1,112 @@
+body {
+    background: #f5f5f5;
+}
+
+.gradient-nav-top {
+    background-image: linear-gradient(to top, #243949 0%, #517fa4 100%);
+}
+
+.border-card {
+    border-radius: 25px 25px 0px 0px;
+    -moz-border-radius: 25px 25px 0px 0px;
+    -webkit-border-radius: 25px 25px 0px 0px;
+    background-image: linear-gradient(to top, #f5f5f5 0%, #f0faff 100%);
+}
+
+/* Buttons main bar */
+.nav-buttons {
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    border-top-right-radius: 10% 50%;
+    border-bottom-right-radius: 10% 50%;
+}
+
+/* Sub titles */
+.h4SubTitle {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 3px 3px #7cd3fc;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 1px #4b81ad;
+    line-height: 50px;
+    margin-left: 1%;
+}
+
+.subMenu {
+    position: relative;
+    float: right;
+    margin-right: 1%;
+    margin-top: 3%;
+}
+
+/* Footer styles */
+footer {
+    width:100%;
+    min-height:250px;
+    padding: 10px 0px 5px 0px ;
+}
+
+footer p {
+    font-size:13px;
+    color:#CCC;
+}
+
+.social_footer_ul {
+    display: table;
+    margin: 15px auto 0 auto;
+    list-style-type: none;
+}
+
+.social_footer_ul li {
+    padding-left: 20px;
+    padding-top: 10px;
+    float: left;
+}
+
+.social_footer_ul li a {
+    color:#CCC;
+    border: 1px solid #CCC;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.social_footer_ul li i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    transition: .4s all;
+}
+
+.social_footer_ul li i:hover {
+    /* transform: rotate(360deg); */
+    transform: rotate3d(1,2,3,360deg);
+}
+
+/* Nav main styles */
+.nav-item::after{
+    content:'';
+    display:block;
+    width:0px;
+    height:2px;
+    background:#fec400;
+    transition: 0.2s;
+}
+.nav-item:hover::after{
+    width:100%;
+}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+    color:#fec400;
+}
+.nav-link{
+    padding:15px 5px;
+    transition:0.2s;
+}
+.dropdown-item.active, .dropdown-item:active{
+    color:#212529;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+    background:#fec400;
+}

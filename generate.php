@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $sth = $dbh->prepare($sql);
     $arr = [];
 
-    for ($i = 0; $i < 1000; $i++){
+    for ($i = 0; $i < 1000000; $i++){
         $randnumber = mt_rand(1, 1000000);
 
         array_push ($arr, [

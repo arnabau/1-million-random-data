@@ -42,7 +42,7 @@ const getData = (pageNum) => {
     const http = new SetHTTP;
     Utils.getClean();
 
-    http.get('http://edurio.test/tables/source/get_data.php')
+    http.get('http://test.test/tables/source/get_data.php')
         .then(response => {
             if (response.error) {
                 console.log(response.error);
@@ -61,7 +61,7 @@ const sendData = () => {
     const http = new SetHTTP;
     Utils.getClean();
 
-    http.get('http://edurio.test/generate.php')
+    http.get('http://test.test/generate.php')
         .then(response => {
             if (response.error) {
                 console.log(response.error);
@@ -89,18 +89,18 @@ const createList = (dataList, currentPage) => {
 
     let recordsPerPage = 50;
     let totalRecords = dataList.records.length;
-    let totalPages = Math.ceil(totalRecords/recordsPerPage);
+    let totalPages = Math.ceil(totalRecords / recordsPerPage);
 
-    let startIndex = (currentPage-1) * recordsPerPage;
+    let startIndex = (currentPage - 1) * recordsPerPage;
     let endIndex = startIndex + recordsPerPage;
-    let dataValues = dataList.records.slice(startIndex,endIndex);
+    let dataValues = dataList.records.slice(startIndex, endIndex);
 
     let list = '';
     let html = "";
 
     html += `<ul class="list-group mt-2 mb-2">`;
 
-    for(let i = 0; i < dataValues.length; i++){
+    for (let i = 0; i < dataValues.length; i++) {
         html += `
         <li class="list-group-item d-flex justify-content-between align-items-center">
             ${dataValues[i].a} <span class="badge badge-secondary badge-pill">3% ${dataValues[i].b}</span>
@@ -118,7 +118,7 @@ const createList = (dataList, currentPage) => {
             <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
     `;
-    for (let i = 1; i <= totalPages; i++){
+    for (let i = 1; i <= totalPages; i++) {
         list += `
             <li class="page-item" id="el${i}"><a class="page-link" href="#">${i}</a></li>
         `;
@@ -162,14 +162,14 @@ class SetHTTP {
  */
 class Utils {
     // Get current URL
-    static getCurrentURL () {
+    static getCurrentURL() {
         const currentUrl = window.location.pathname.split('/');
         // Return split value to get only the last one
         return currentUrl[1];
     }
 
     // Enable/Disable buttons
-    static buttonAction (action) {
+    static buttonAction(action) {
         if (action === true) {
             // $('.modal').modal('show');
             document.querySelector('.form-get').disabled = true;
@@ -187,12 +187,12 @@ class Utils {
         }
     }
 
-    static putFlash (msg) {
+    static putFlash(msg) {
         document.querySelector('.message').style = 'display:block';
         document.querySelector('.message').textContent = msg;
     }
 
-    static getClean () {
+    static getClean() {
         document.querySelector('.list-group').innerHTML = '';
         document.querySelector('.pagination').innerHTML = '';
     }

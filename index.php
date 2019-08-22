@@ -16,7 +16,7 @@
     <header>
         <div class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm gradient-nav-top">
             <div class="container">
-                <a href="index.php" class="navbar-brand">Edurio test</a>
+                <a href="index.php" class="navbar-brand">1 million random data</a>
                 <div class="nav-scroller py-1 mb-2">
                     <nav class="navbar navbar-expand-md bg-dark navbar-dark nav-buttons">
                         <!-- Toggler/collapsibe Button -->
